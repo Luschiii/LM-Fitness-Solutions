@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum | LM Fitness Solutions</title>
+    <style>
+        /* Globale Stile und Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        html, body {
+            color: #131313;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            color: #2A403D;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #131313;
+        }
+        .nav-close {
+            display: none;
+        }
+
+        /* Mobile Navigation Menu */
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Inhalt */
+        .content-section {
+            min-height: 80vh;
+            padding: 80px 0;
+        }
+
+        footer {
+            padding: 20px 0;
+        }
+
+        .footer-links a {
+            margin-right: 20px;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: #fff;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: right 0.3s ease;
+                z-index: 1000;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                margin: 20px 0;
+            }
+
+            .nav-close {
+                display: block;
+                position: absolute;
+                top: 0px;
+                right: 32px;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">LM Fitness Solutions</a>
+            <div class="hamburger">☰</div>
+            <ul class="nav-links">
+                <li class="nav-close">✕</li>
+                <li><a href="index.html#leistungen">Leistungen</a></li>
+                <li><a href="index.html#testimonials">Erfahrungen</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1>Impressum</h1>
+            <p>Angaben gemäß § 5 TMG</p>
+            <p>LM Fitness Solutions<br>
+            Lukas Müller<br>
+            Musterstraße 1<br>
+            12345 Musterstadt</p>
+            <p>Kontakt:<br>
+            Telefon: 01234&nbsp;567890<br>
+            E-Mail: <a href="mailto:info@lm-fitness.de">info@lm-fitness.de</a></p>
+            <p>Umsatzsteuer-ID: DE123456789</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="#">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navClose = document.querySelector('.nav-close');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.add('active');
+        });
+
+        navClose.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
