@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz | LM Fitness Solutions</title>
+    <style>
+        /* Globale Stile und Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        html, body {
+            color: #131313;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            overflow-y: scroll;
+            scroll-snap-type: y proximity;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+            
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            color: #2A403D;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #131313;
+        }
+        .nav-close {
+            display: none;
+        }  
+
+        /* Mobile Navigation Menu */
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero-Sektion und Nav kombiniert */
+        .hero-section {
+            min-height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hero-Bereich */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 0;
+            flex-grow: 1;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 40px;
+            min-width: 300px;
+        }
+
+        .hero-subtitle {
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .hero-title {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #2A403D;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            min-width: 300px;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 30px;
+            width: 75%;
+        }
+
+        /* Info-Bereich */
+        .info-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2A403D;
+            color: white;
+            padding: 80px 0;
+            scroll-snap-align: start;
+        }
+
+        .info-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .info-text {
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            color: #e6e6e6;
+        }
+
+        .bold-text {
+            font-weight: 700;
+        }
+
+        /* Feature-Karten */
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            flex-basis: 30%;
+            margin-bottom: 30px;
+        }
+
+        .feature-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .emoji {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .feature-description {
+            font-size: 14px;
+            color: #e6e6e6;
+        }
+
+        /* Leistungen */
+        .services-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 0;
+            scroll-snap-align: start;
+            background-color: white;
+        }
+        
+        .services-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            flex-basis: 48%;
+            margin-bottom: 30px;
+        }
+
+        .service-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Termin-Button */
+        .appointment-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .appointment-button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+        }
+        /* Testimonials */
+
+        .testimonials-section {
+            min-height: 100vh;
+            scroll-snap-align: start;
+            justify-content: center;
+            padding: 4rem 2rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        
+        .testimonials-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonials-grid {
+            
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonials-title
+        {
+            text-align: left;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        /* Footer */
+        footer {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            scroll-snap-align: start;
+        }
+
+        .footer-links a {
+            margin-right: 20px;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Responsive Design - Medium Screens (Tablets) */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 48px;
+            }
+            
+            .feature-card {
+                flex-basis: 45%;
+            }
+        }
+
+        /* Responsive Design - Small Screens (Mobile) */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 0;
+            }
+            
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 40px;
+                order: 2;
+            }
+            
+            .hero-image {
+                order: 1;
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+            
+            .hero-image img {
+                width: 90%;
+            }
+            
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .feature-card, .service-card {
+                flex-basis: 100%;
+            }
+            
+            .info-title {
+                font-size: 28px;
+            }
+            
+            /* Hamburger Menu for Mobile */
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: #fff;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: right 0.3s ease;
+                z-index: 1000;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 20px 0;
+            }
+            
+            .nav-close {
+                display: block;
+                position: absolute;
+                top: 0px;
+                right: 32px;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+        
+        /* Sehr kleine Screens (Small Phones) */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .cta-button {
+                padding: 12px 30px;
+            }
+            
+            .info-title {
+                font-size: 24px;
+            }
+            
+            .services-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+        .legal-section {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+        .legal-section h2 {
+            font-size: 24px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .legal-section p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html" class="logo">LM Fitness Solutions</a>
+            <div class="hamburger">☰</div>
+            <ul class="nav-links">
+                <li class="nav-close">✕</li>
+                <li><a href="index.html#leistungen">Leistungen</a></li>
+                <li><a href="index.html#testimonials">Erfahrungen</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="legal-section">
+        <h1>Datenschutzerklärung</h1>
+        <h2>1. Verantwortlicher</h2>
+        <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
+        LM Fitness Solutions<br>
+        Inhaber: Lukas Müller<br>
+        Mönchsbergstraße 5<br>
+        68789 St. Leon-Rot<br>
+        E-Mail: lm.fitness.solutions@googlemail.com</p>
+
+        <h2>2. Hosting über GitHub Pages</h2>
+        <p>Diese Website wird über GitHub Pages bereitgestellt, einem Dienst der GitHub Inc., 88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA.<br>
+        Beim Aufrufen der Seite werden automatisch Informationen erfasst (sog. Server-Logfiles), wie z.&nbsp;B. IP-Adresse, Browsertyp, Betriebssystem und Zugriffszeitpunkt. Diese Daten dienen der technischen Bereitstellung und Sicherheit der Website. Eine Auswertung durch den Websitebetreiber findet nicht statt.</p>
+        <p>Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem Betrieb der Website).</p>
+
+        <h2>3. Einsatz von lokal eingebundenen Schriftarten</h2>
+        <p>Auf dieser Website werden ausschließlich lokal eingebundene Schriftarten verwendet. Eine Verbindung zu externen Font-Servern (z.&nbsp;B. Google Fonts) wird nicht hergestellt. Es werden keine personenbezogenen Daten in diesem Zusammenhang verarbeitet.</p>
+
+        <h2>4. Kontaktaufnahme</h2>
+        <p>Wenn Sie mit mir Kontakt aufnehmen (z.&nbsp;B. per E-Mail oder WhatsApp), werden die von Ihnen übermittelten Daten (z.&nbsp;B. Name, Telefonnummer, Anliegen) zur Bearbeitung der Anfrage verarbeitet.<br>
+        Diese Daten werden nicht ohne Ihre Einwilligung weitergegeben und nach Erledigung der Anfrage gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
+        <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung / vorvertragliche Maßnahmen).</p>
+
+        <h2>5. Terminbuchung über Calendly</h2>
+        <p>Für die Online-Terminvergabe nutze ich den Dienst Calendly, betrieben von Calendly LLC, 271 17th St NW, Atlanta, GA 30363, USA.</p>
+        <p>Bei der Buchung eines Termins über Calendly werden personenbezogene Daten wie Name, E-Mail-Adresse und gewünschte Terminzeit verarbeitet. Die Datenübertragung erfolgt auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.</p>
+        <p>Calendly verarbeitet Daten in den USA. Es wurde ein Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO abgeschlossen.<br>
+        Weitere Informationen zum Datenschutz bei Calendly finden Sie unter: <a href="https://calendly.com/privacy">https://calendly.com/privacy</a></p>
+
+        <h2>6. Ihre Rechte</h2>
+        <p>Sie haben jederzeit das Recht:</p>
+        <ul>
+            <li>auf Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO),</li>
+            <li>auf Berichtigung (Art. 16 DSGVO),</li>
+            <li>auf Löschung (Art. 17 DSGVO),</li>
+            <li>auf Einschränkung der Verarbeitung (Art. 18 DSGVO),</li>
+            <li>auf Datenübertragbarkeit (Art. 20 DSGVO),</li>
+            <li>sowie auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO).</li>
+        </ul>
+
+        <h2>7. Widerruf Ihrer Einwilligung</h2>
+        <p>Sie können eine bereits erteilte Einwilligung zur Datenverarbeitung jederzeit mit Wirkung für die Zukunft widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung.</p>
+
+        <h2>8. Stand und Änderungen</h2>
+        <p>Diese Datenschutzerklärung hat den Stand: Juli 2025.<br>
+        Ich behalte mir vor, sie anzupassen, sofern technische Änderungen oder gesetzliche Vorgaben dies erfordern.</p>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navClose = document.querySelector('.nav-close');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.add('active');
+        });
+
+        navClose.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
