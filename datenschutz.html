@@ -1,102 +1,245 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Datenschutz | LM Fitness Solutions</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung - Fitness Coach</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lightGray: '#f7f7f7',
+            cardBg: '#e8e8e8'
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <header>
-    <div class="container">
-      <nav>
-        <a href="index.html" class="logo">LM Fitness Solutions</a>
-        <div class="hamburger">☰</div>
-        <ul class="nav-links">
-          <li class="nav-close">✕</li>
-          <li><a href="index.html#testimonials">Erfahrungen</a></li>
-        </ul>
+<body class="font-sans bg-white text-black min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <div class="text-2xl font-black uppercase">
+        <a href="index.html" class="hover:text-blue-600 transition">CoachLogo</a>
+      </div>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="index.html#steps" class="hover:text-blue-600 transition">Ablauf</a>
+        <a href="index.html#transform" class="hover:text-blue-600 transition">Vorher/Nachher</a>
+        <a href="index.html#experience" class="hover:text-blue-600 transition">Erfahrungen</a>
       </nav>
     </div>
   </header>
 
-  <main class="datenschutz-section">
-    <div class="container">
-      <h1 class="datenschutz-title">Datenschutzerklärung</h1>
+  <!-- Main Content -->
+  <main class="pt-28 pb-20 bg-white flex-grow">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-4xl md:text-5xl font-black uppercase text-center mb-12">Datenschutzerklärung</h1>
+      
+      <div class="bg-lightGray p-8 rounded-2xl shadow-lg space-y-8">
+        
+        <!-- Allgemeine Hinweise 
+        <section>
+          <h2 class="text-2xl font-bold uppercase mb-4">1. Datenschutz auf einen Blick</h2>
+          
+          <h3 class="text-xl font-bold mb-3">Allgemeine Hinweise</h3>
+          <p class="text-gray-700 mb-4">
+            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten 
+            passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie 
+            persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen 
+            Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.
+          </p>
 
-        <h2>1. Verantwortlicher</h2>
-        <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br>
-        LM Fitness Solutions<br>
-        Inhaber: Lukas Müller<br>
-        Mönchsbergstraße 5<br>
-        68789 St. Leon-Rot<br>
-        E-Mail: lm.fitness.solutions@googlemail.com</p>
+          <h3 class="text-xl font-bold mb-3">Datenerfassung auf dieser Website</h3>
+          <p class="text-gray-700 mb-4">
+            <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
+            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten 
+            können Sie dem Impressum dieser Website entnehmen.
+          </p>
+          
+          <p class="text-gray-700 mb-4">
+            <strong>Wie erfassen wir Ihre Daten?</strong><br>
+            Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um 
+            Daten handeln, die Sie in ein Kontaktformular eingeben oder per WhatsApp/E-Mail übermitteln.
+          </p>
 
-        <h2>2. Hosting über GitHub Pages</h2>
-        <p>Diese Website wird über GitHub Pages bereitgestellt, einem Dienst der GitHub Inc., 88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA.<br>
-        Beim Aufrufen der Seite werden automatisch Informationen erfasst (sog. Server-Logfiles), wie z.&nbsp;B. IP-Adresse, Browsertyp, Betriebssystem und Zugriffszeitpunkt. Diese Daten dienen der technischen Bereitstellung und Sicherheit der Website. Eine Auswertung durch den Websitebetreiber findet nicht statt.</p>
-        <p>Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem Betrieb der Website).</p>
+          <p class="text-gray-700">
+            <strong>Wofür nutzen wir Ihre Daten?</strong><br>
+            Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. 
+            Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden oder zur Kontaktaufnahme 
+            für Fitness-Coaching-Dienstleistungen.
+          </p>
+        </section>
+        -->
+        <!-- Verantwortlicher -->
+        <section>
+          <h2 class="text-2xl font-bold uppercase mb-4">1. Verantwortlicher</h2>
+          <p class="text-gray-700">
+            Verantwortlicher im Sinne der Datenschutz-Grundverordnung und anderer nationaler Datenschutzgesetze 
+            der Mitgliedsstaaten sowie sonstiger datenschutzrechtlicher Bestimmungen ist:
+          </p>
+          <div class="mt-4 space-y-2 text-gray-700">
+            <p>Lukas Müller</p>
+            <p>Mönchsbergstraße 5</p>
+            <p>68789 St. Leon-Rot</p>
+            <p>Deutschland</p>
+            <p>Telefon: 01575 7145396 </p>
+            <p>E-Mail: lm.fitness.solutions@googlemail.com</p>
+          </div>
+        </section>
 
-        <h2>3. Einsatz von lokal eingebundenen Schriftarten</h2>
-        <p>Auf dieser Website werden ausschließlich lokal eingebundene Schriftarten verwendet. Eine Verbindung zu externen Font-Servern (z.&nbsp;B. Google Fonts) wird nicht hergestellt. Es werden keine personenbezogenen Daten in diesem Zusammenhang verarbeitet.</p>
+        <!-- Hosting über GitHub Pages -->
+        <section>
+            <h2 class="text-2xl font-bold uppercase mb-4">2. Hosting über GitHub Pages</h2>
+          <p class="text-gray-700">
+            Diese Website wird über GitHub Pages bereitgestellt, einem Dienst der GitHub Inc., 88 Colin P. Kelly Jr St, San Francisco, CA 94107, USA.
+            Beim Aufrufen der Seite werden automatisch Informationen erfasst (sog. Server-Logfiles), wie z. B. IP-Adresse, Browsertyp, Betriebssystem und Zugriffszeitpunkt. 
+            Diese Daten dienen der technischen Bereitstellung und Sicherheit der Website. Eine Auswertung durch den Websitebetreiber findet nicht statt.
+            Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an sicherem Betrieb der Website).
+          </p>
+        </section>
+        
+        <!-- Datenerfassung -->
+        <section>
+          <h2 class="text-2xl font-bold uppercase mb-4">3. Datenerfassung auf dieser Website</h2>
+          
+          <h3 class="text-xl font-bold mb-3">Server-Log-Dateien</h3>
+          <p class="text-gray-700 mb-4">
+            Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, 
+            die Ihr Browser automatisch an uns übermittelt. Dies sind:
+          </p>
+          <ul class="list-disc list-inside text-gray-700 mb-4 space-y-1">
+            <li>Browsertyp und Browserversion</li>
+            <li>verwendetes Betriebssystem</li>
+            <li>Referrer URL</li>
+            <li>Hostname des zugreifenden Rechners</li>
+            <li>Uhrzeit der Serveranfrage</li>
+            <li>IP-Adresse</li>
+          </ul>
+          <p class="text-gray-700">
+            Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen. Die Erfassung dieser 
+            Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes 
+            Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website.
+          </p>
 
-        <h2>4. Kontaktaufnahme</h2>
-        <p>Wenn Sie mit mir Kontakt aufnehmen (z.&nbsp;B. per E-Mail oder WhatsApp), werden die von Ihnen übermittelten Daten (z.&nbsp;B. Name, Telefonnummer, Anliegen) zur Bearbeitung der Anfrage verarbeitet.<br>
-        Diese Daten werden nicht ohne Ihre Einwilligung weitergegeben und nach Erledigung der Anfrage gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
-        <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung / vorvertragliche Maßnahmen).</p>
+          <h3 class="text-xl font-bold mb-3 mt-6">Kontaktformular und E-Mail-Kontakt</h3>
+          <p class="text-gray-700 mb-4">
+            Wenn Sie per WhatsApp, Calendly oder E-Mail mit uns in Kontakt treten, werden Ihre Angaben 
+            inklusive der von Ihnen angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von 
+            Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+          </p>
+          <p class="text-gray-700">
+            Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der 
+            Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. 
+            In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven 
+            Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
+          </p>
+        </section>
 
-        <h2>5. Terminbuchung über Calendly</h2>
-        <p>Für die Online-Terminvergabe nutze ich den Dienst Calendly, betrieben von Calendly LLC, 271 17th St NW, Atlanta, GA 30363, USA.</p>
-        <p>Bei der Buchung eines Termins über Calendly werden personenbezogene Daten wie Name, E-Mail-Adresse und gewünschte Terminzeit verarbeitet. Die Datenübertragung erfolgt auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.</p>
-        <p>Calendly verarbeitet Daten in den USA. Es wurde ein Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO abgeschlossen.<br>
-        Weitere Informationen zum Datenschutz bei Calendly finden Sie unter: <a href="https://calendly.com/privacy">https://calendly.com/privacy</a></p>
+        <!-- Externe Dienste -->
+        <section>
+          <h2 class="text-2xl font-bold uppercase mb-4">4. Externe Dienste</h2>
+          
+          <h3 class="text-xl font-bold mb-3">WhatsApp Business</h3>
+          <p class="text-gray-700 mb-4">
+            Wir nutzen WhatsApp Business für die Kommunikation mit Kunden. Anbieter ist die Meta Platforms Ireland 
+            Limited. Bei der Nutzung von WhatsApp werden personenbezogene Daten (wie Telefonnummer, Name, 
+            Nachrichteninhalte) verarbeitet. Die Verarbeitung erfolgt zur Kommunikation und Kundenbetreuung auf 
+            Grundlage von Art. 6 Abs. 1 lit. b DSGVO.
+          </p>
 
-        <h2>6. Ihre Rechte</h2>
-        <p>Sie haben jederzeit das Recht:</p>
-        <ul>
-            <li>auf Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO),</li>
-            <li>auf Berichtigung (Art. 16 DSGVO),</li>
-            <li>auf Löschung (Art. 17 DSGVO),</li>
-            <li>auf Einschränkung der Verarbeitung (Art. 18 DSGVO),</li>
-            <li>auf Datenübertragbarkeit (Art. 20 DSGVO),</li>
-            <li>sowie auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO).</li>
-        </ul>
+          <h3 class="text-xl font-bold mb-3">Calendly</h3>
+          <p class="text-gray-700 mb-4">
+            Zur Terminbuchung nutzen wir Calendly (Calendly LLC, USA). Bei der Terminbuchung werden Ihre Daten 
+            (Name, E-Mail, Telefon) an Calendly übermittelt. Die Verarbeitung erfolgt auf Grundlage von 
+            Art. 6 Abs. 1 lit. b DSGVO zur Vertragserfüllung.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Calendly verarbeitet Daten in den USA. Es wurde ein Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO abgeschlossen.
+            Weitere Informationen zum Datenschutz bei Calendly finden Sie unter: https://calendly.com/privacy
+          </p>
 
-        <h2>7. Widerruf Ihrer Einwilligung</h2>
-        <p>Sie können eine bereits erteilte Einwilligung zur Datenverarbeitung jederzeit mit Wirkung für die Zukunft widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der bis dahin erfolgten Verarbeitung.</p>
+          <h3 class="text-xl font-bold mb-3">Shapo.io (Bewertungswidget)</h3>
+          <p class="text-gray-700">
+            Auf unserer Website ist ein Bewertungswidget von Shapo.io eingebunden. Beim Laden des Widgets können 
+            Daten wie IP-Adresse und Browserinformationen an Shapo.io übertragen werden. Die Verarbeitung erfolgt 
+            auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Darstellung von 
+            Kundenbewertungen).
+          </p>
+        </section>
 
-        <h2>8. Stand und Änderungen</h2>
-        <p>Diese Datenschutzerklärung hat den Stand: Juli 2025.<br>
-        Ich behalte mir vor, sie anzupassen, sofern technische Änderungen oder gesetzliche Vorgaben dies erfordern.</p>
+        <!-- Ihre Rechte -->
+        <section>
+          <h2 class="text-2xl font-bold uppercase mb-4">5. Ihre Rechte</h2>
+          <p class="text-gray-700 mb-4">
+            Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:
+          </p>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+            <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+            <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+            <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+            <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+            <li>Recht auf Widerspruch (Art. 21 DSGVO)</li>
+            <li>Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
+          </ul>
+        </section>
+
+        <!-- Speicherdauer -->
+        <section>
+          <h2 class="text-2xl font-bold uppercase mb-4">6. Speicherdauer</h2>
+          <p class="text-gray-700">
+            Personenbezogene Daten werden nur so lange gespeichert, wie es für den jeweiligen Zweck erforderlich ist. 
+            Kontaktdaten von Interessenten und Kunden werden für die Dauer der Geschäftsbeziehung und darüber hinaus 
+            entsprechend der gesetzlichen Aufbewahrungsfristen gespeichert. Server-Log-Dateien werden nach 
+            7 Tagen automatisch gelöscht.
+          </p>
+        </section>
+
+        <!-- SSL/TLS-Verschlüsselung -->
+        <section>
+          <h2 class="text-2xl font-bold uppercase mb-4">7. SSL- bzw. TLS-Verschlüsselung</h2>
+          <p class="text-gray-700">
+            Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine 
+            SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile 
+            des Browsers von "http://" auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+          </p>
+        </section>
+
+        <!-- Änderungen -->
+        <section>
+          <h2 class="text-2xl font-bold uppercase mb-4">8. Änderungen der Datenschutzerklärung</h2>
+          <p class="text-gray-700">
+            Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen 
+            Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. 
+            Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
+          </p>
+        </section>
+
+        <!-- Stand -->
+        <section class="border-t pt-6">
+          <p class="text-gray-600 text-sm">
+            <strong>Stand der Datenschutzerklärung:</strong> September 2025
+          </p>
+        </section>
+
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-links">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-4">
+      <p class="text-gray-400 text-sm">© 2025 Fitness Coach. Alle Rechte vorbehalten.</p>
+      <div class="space-x-6">
+        <a href="datenschutz.html" class="hover:text-blue-600 transition">Datenschutz</a>
+        <a href="impressum.html" class="hover:text-blue-600 transition">Impressum</a>
       </div>
     </div>
   </footer>
 
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const navClose = document.querySelector('.nav-close');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.add('active');
-    });
-
-    navClose.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-      });
-    });
-  </script>
 </body>
 </html>
