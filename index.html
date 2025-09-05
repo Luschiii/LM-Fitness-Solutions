@@ -1,140 +1,240 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LM Fitness Solutions | Lukas Müller, Personal Trainer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness Coach</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <!-- Hero-Sektion und Nav in einem gemeinsamen Container -->
-    <div class="hero-section">
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">LM Fitness Solutions</a>
-                <div class="hamburger">☰</div>
-                <ul class="nav-links">
-                    <li class="nav-close">✕</li>
-                    <!--
-                     <li><a href="#leistungen">Leistungen</a></li>
-                -->
-                    <li><a href="#testimonials">Erfahrungen</a></li>
-                </ul>
-            </nav>
+<body class="font-sans bg-white text-black min-h-screen flex flex-col">
 
-            <section class="hero">
-                <div class="hero-content">
-                    <p class="hero-subtitle">Lukas Müller, Personal Trainer</p>
-                    <h1 class="hero-title">"Stark, schlank, selbstbewusst!"</h1>
-                    <a href="https://calendly.com/lm-fitness-solutions/kostenloses-erstgesprach" class="cta-button">Let's go!</a>
-                </div>
-                <div class="hero-image">
-                    <img src="images/Lukas_Hero_Section.png" alt="Lukas Müller, Personal Trainer">
-                </div>
-            </section>
+  <!-- Navigation -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <div class="text-2xl font-black uppercase">
+        <a href="index.html" class="hover:text-blue-600 transition">CoachLogo </a>
+      </div>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#steps" class="hover:text-blue-600 transition">Ablauf</a>
+        <a href="#transform" class="hover:text-blue-600 transition">Vorher/Nachher</a>
+        <a href="#experience" class="hover:text-blue-600 transition">Erfahrungen</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="pt-28 mb-16 md:pt-40 bg-lightGray">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 gap-10">
+      <div class="flex-1 text-center md:text-left">
+        <h1 class="text-5xl md:text-6xl font-black uppercase leading-tight">Stark, Schlank, Selbstbewusst! Dein erster Schritt zu mehr Lebensqualität. </h1>
+        <p class="mt-4 text-gray-600">Gemeinsam erreichen wir deine Fitnessziele – effektiv, motivierend und an deinen Alltag angepasst.</p>
+        <div class="mt-6 flex gap-4 justify-center md:justify-start">
+          <a href="#contact" class="bg-black text-white px-6 py-3 uppercase font-bold hover:bg-blue-500 transition">📞 Whatsapp</a>
+          <a href="#experience" class="border-2 border-black px-6 py-3 uppercase font-bold hover:bg-black hover:text-white transition">📅 Termin buchen</a>
+        </div>
+      </div>
+      <div class="flex-1">
+        <img src="images/Lukas_Foto_ohne_Hintergrund.png" alt="Coach" class="rounded-2xl" style="max-width: 80%; height: auto;">
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Gründe -->
+  <section id="reasons" class="py-20 mb-16 bg-white" >
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold uppercase text-center">4 Gründe warum mein Coaching funktioniert</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+
+        <div class="bg-cardBg text-white p-6 rounded-2xl shadow hover:scale-105 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+          </svg>
+
+          <br>
+
+          <h3 class="uppercase font-bold text-xl text-black">Individuell</h3>
+          <p class="mt-2 text-gray-700">Maßgeschneiderte Trainingspläne für deine Ziele.</p>
+        </div>
+
+        <div class="bg-cardBg text-white p-6 rounded-2xl shadow hover:scale-105 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z" />
+          </svg>
+          <br>
+
+          <h3 class="uppercase font-bold text-xl text-black">Motivierend</h3>
+          <p class="mt-2 text-gray-700">Ständige Motivation und Feedback für Fortschritt.</p>
+        </div>
+        <div class="bg-cardBg text-white p-6 rounded-2xl shadow hover:scale-105 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+          </svg>
+          <br>
+
+          <h3 class="uppercase font-bold text-xl text-black">Nachhaltig</h3>
+          <p class="mt-2 text-gray-700">Fokus auf langfristige Gesundheit und Fitness.</p>
+        </div>
+        <div class="bg-cardBg text-white p-6 rounded-2xl shadow hover:scale-105 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0" />
+          </svg>
+          <br>
+
+          <h3 class="uppercase font-bold text-xl text-black">Ergebnisorientiert</h3>
+          <p class="mt-2 text-gray-700">Messbare Resultate durch klaren Trainingsplan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- So läuft’s ab -->
+  <section id="steps" class="py-20 mb-16 bg-lightGray">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold uppercase text-center">So läuft’s ab</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
+        <div class="text-center bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" class="size-6">
+        <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+        </svg>
+          <h3 class="uppercase font-bold text-lg">Kontakt</h3>
+          <p class="text-gray-600 mt-2">Einfache Kontaktaufnahme über WhatsApp oder Calendly.</p>
+        </div>
+        <div class="text-center bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+        <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 0 0-1.032-.211 50.89 50.89 0 0 0-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 0 0 2.433 3.984L7.28 21.53A.75.75 0 0 1 6 21v-4.03a48.527 48.527 0 0 1-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979Z" />
+        <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 0 0 1.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0 0 15.75 7.5Z" />
+        </svg>
+
+          <h3 class="uppercase font-bold text-lg">Kennenlernen</h3>
+          <p class="text-gray-600 mt-2">Wir klären deine Ziele und Wünsche.</p>
+        </div>
+        <div class="text-center bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+        <path fill-rule="evenodd" d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z" clip-rule="evenodd" />
+        <path fill-rule="evenodd" d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z" clip-rule="evenodd" />
+        </svg>
+
+          <h3 class="uppercase font-bold text-lg">Analyse</h3>
+          <p class="text-gray-600 mt-2">Gemeinsame Analyse deiner aktuellen Situation.</p>
+        </div>
+        <div class="text-center bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+        <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+        <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd" />
+        </svg>
+
+          <h3 class="uppercase font-bold text-lg">Training</h3>
+          <p class="text-gray-600 mt-2">Gemeinsame Umsetzung deines Programms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vorher / Nachher -->
+  <section id="transform" class="py-20 mb-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 space-y-16">
+      <h2 class="text-3xl md:text-4xl font-bold uppercase text-center">Vorher - Nachher</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <img src="Images Coachees/1Vorher.jpeg" class="w-96 h-96 rounded-2xl shadow-lg" alt="Person 1 Vorher">
+        <img src="Images Coachees/1Nachher.jpeg" class="w-96 h-96 rounded-2xl shadow-lg" alt="Person 1 Nachher">
+        <div class="flex-1">
+          <h3 class="uppercase font-bold text-3xl flex-1">- 8,5 Kg</h3>
+          <p class="text-gray-600 mt-2">Innerhalb von 6 Monaten</p>
+        </div>
+      </div>
+      <br>
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+        <img src="Images Coachees/2Nachher.jpeg" class="w-96 h-96 rounded-2xl shadow-lg" alt="Person 2 Nachher">
+        <img src="Images Coachees/2Vorher.jpeg" class="w-96 h-96 rounded-2xl shadow-lg" alt="Person 2 Vorher">
+        <div class="flex-1">
+          <h3 class="uppercase font-bold text-3xl">- 8,5 Kg</h3>
+          <p class="text-gray-600 mt-2">Innerhalb von 6 Monaten</p>
+        </div>
+      </div>
+      <br>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <img src="Images Coachees/3Vorher.jpeg" class="w-96 h-96 rounded-2xl shadow-lg" alt="Person 3 Vorher">
+        <img src="Images Coachees/3Nachher.jpeg" class="w-96 h-96 rounded-2xl shadow-lg" alt="Person 3 Nachher">
+        <div class="flex-1">
+          <h3 class="uppercase font-bold text-3xl">- 4,5 Kg</h3>
+          <p class="text-gray-600 mt-2">Innerhalb von 4 Monaten</p>
+        </div>
+      </div>
+      <br>
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+        <img src="Images Coachees/4Nachher.png" class="w-96 h-96 rounded-2xl shadow-lg" alt="Person 4 Nachher">
+        <img src="Images Coachees/4Vorher.jpeg" class="w-96 h-96 rounded-2xl shadow-lg" alt="Person 4 Vorher">
+        <div class="flex-1">
+          <h3 class="uppercase font-bold text-3xl">- 5 Kg</h3>
+          <p class="text-gray-600 mt-2">Innerhalb von 8 Monaten</p>
         </div>
     </div>
+  </section>
 
-    <section class="info-section">
-        <div class="container">
-            <h2 class="info-title">Dein erster Schritt zu mehr Fitness und Lebensqualität.</h2>
-            <p class="info-text">
-                Du möchtest endlich Deine Fitnessziele erreichen, weißt aber nicht, wo Du anfangen sollst?
-                <br><br>
-                <span class="bold-text">In einem kurzen, unverbindlichen Gespräch</span> (ca. 10 Minuten) 
-                lernen wir uns kennen und finden gemeinsam heraus, ob mein 
-                Ansatz zu DIR passt.
-                <br>
-                Was erwartet dich also?
-            </p>
-
-            <div class="features">
-                <div class="feature-card">
-                    <h3 class="feature-title"><span class="emoji">📞</span> Persönliches Kennenlernen</h3>
-                    <p class="feature-description">Wir sprechen über Deine Wünsche und Ziele.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 class="feature-title"><span class="emoji">📝</span> Erster Einblicke in meine Trainingsmethoden</h3>
-                    <p class="feature-description">Individuell, alltagstauglich und effizient.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 class="feature-title"><span class="emoji">🎯</span> Klarheit über deine nächsten Schritte</h3>
-                    <p class="feature-description">Damit du motiviert starten kannst – ohne Druck, ohne Verpflichtung.</p>
-                </div>
-            </div>
-
-            <div class="appointment-container">
-                <a href="https://calendly.com/lm-fitness-solutions/kostenloses-erstgesprach" class="appointment-button">Termin vereinbaren 📅</a>
-            </div>
-        </div>
-    </section>
-<!--
-    <section id="leistungen" class="services-section">
-        <div class="container">
-            <h2 class="services-title">Leistungen</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3 class="service-title">Personal Training</h3>
-                    <p class="service-description">1:1 Training für deine optimale Entwicklung und Technik-Check</p>
-                </div>
-                <div class="service-card">
-                    <h3 class="service-title">Online Coaching</h3>
-                    <p class="service-description">1:1 Training für deine optimale Entwicklung und Technik-Check</p>
-                </div>
-            </div>
-        </div>
-    </section>
--->
-    <section id="testimonials" class="testimonials-section">
-        <h2 class="testimonials-title">Erfahrungen</h2>
+  <!-- Erfahrungen -->
+  <section id="experience" class="py-20 mb-16 bg-lightGray">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold uppercase">Erfahrungen</h2>
+    </div>
         <div id="shapo-widget-4a2a9c79cc1f7b23ba52"></div>
             <script id="shapo-embed-js" type="text/javascript" src="https://cdn.shapo.io/js/embed.js" defer></script>
     </section>
+  </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-            </div>
+  <!-- Kontakt -->
+   <section id="contact" class="py-20 mb-32 bg-white text-center">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold uppercase">Lass uns starten!</h2>
+      <p class="mt-4 text-gray-600">Kontaktiere mich jetzt für dein kostenloses Erstgespräch 🙂</p>
+    </div>
+   <div class="mt-6 flex gap-4 justify-center">
+          <a href="#contact" class="bg-black text-white px-6 py-3 uppercase font-bold hover:bg-blue-500 transition">📞 Whatsapp</a>
+          <a href="#experience" class="border-2 border-black px-6 py-3 uppercase font-bold hover:bg-black hover:text-white transition">📅 Termin buchen</a>
         </div>
-    </footer>
+  </section>
 
-    <script>
-        // Smooth scrolling für Anker-Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Mobile Menu Functionality
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        const navClose = document.querySelector('.nav-close');
-        
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.add('active');
-        });
-        
-        navClose.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
-        
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8 mt-auto">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-4">
+      <p class="text-gray-400 text-sm">© 2025 Fitness Coach. Alle Rechte vorbehalten.</p>
+      <div class="space-x-6">
+        <a href="datenschutz.html" class="hover:text-blue-600 transition">Datenschutz</a>
+        <a href="impressum.html" class="hover:text-blue-600 transition">Impressum</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-24 right-8 bg-black text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 opacity-0 invisible transform translate-y-4 z-50">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+    </svg>
+  </button>
+
+  <script>
+    // Back to Top Button Functionality
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+        backToTopButton.classList.add('opacity-100', 'visible', 'translate-y-0');
+      } else {
+        backToTopButton.classList.add('opacity-0', 'invisible', 'translate-y-4');
+        backToTopButton.classList.remove('opacity-100', 'visible', 'translate-y-0');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
 </body>
 </html>
